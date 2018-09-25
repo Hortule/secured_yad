@@ -16,6 +16,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    Req req;
-    req.sendGet("https://cloud-api.yandex.net/v1/disk/");
+    Req* req = new Req();
+    req->sendGet("https://cloud-api.yandex.net/v1/disk/");
 }

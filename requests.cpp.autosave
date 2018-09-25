@@ -13,8 +13,8 @@ void Req::sendGet(QString Url)
     //user-agent
     request.setUrl(Url);
     request.setRawHeader("Authorization: OAuth ", "AQAAAAAJlF7xAADLW8Sf6NXX-0ugtcoEeY_6dyM");
-  //request.setRawHeader("Content-Type", "application/json");
-    //request.setRawHeader("Accept", "application/json");
+    request.setRawHeader("Content-Type", "application/json");
+    request.setRawHeader("Accept", "application/json");
     reply = manager->get(request);//Получаем данные с сервера
     QObject::connect (manager, SIGNAL(finished(QNetworkReply*)), this, SLOT(getReplyFinished(QNetworkReply*)));
     QString answer = reply->readAll();
