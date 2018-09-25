@@ -1,12 +1,12 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-09-04T19:11:02
+# Project created by QtCreator 2018-09-23T19:09:00
 #
 #-------------------------------------------------
 
 QT       += core gui widgets
-
-TARGET = Secured_YaD
+QT += network
+TARGET = secured_yad
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -24,10 +24,12 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    requests.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    requests.h
 
 FORMS += \
         mainwindow.ui
@@ -36,3 +38,5 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES +=
